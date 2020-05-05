@@ -57,10 +57,9 @@ class DenseAutoEncoderSearch(object):
     def __init__(self,):
         self.encodings = np.load("./weights/encodings/dense_autoencoder.npy")
         self.kmeans = pickle.load(open(f"./weights/cluster_objects/kmeans_dense_cluster.pickle","rb"))
-        print ("Calculating KMenas")
-        self.kmeans.fit(self.encodings)
         self.clusters = self.kmeans.predict(self.encodings)
-        self.encoder =  dense_encoder()
+        _,self.encoder =  dense_autoencoder()
+        self.encoder.load_weights("weights/dense_encoder")
 
 
     def __call__(self,x):

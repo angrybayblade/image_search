@@ -26,7 +26,7 @@ def search():
     img = request.files['image']
     img.save(f"./search/{img.filename}")
     results = DAESearch(img.filename)
-    results = [{"path":f"http://localhost:8080/images/img_{i}.jpg","name":f"img_{i}.jpg"} for i in results ][:40]
+    results = [{"path":f"http://localhost:8080/images/img_{i}.jpg","name":f"img_{i}.jpg"} for i in results ][:50]
     return {
         "results":results
     }
