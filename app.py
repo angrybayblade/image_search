@@ -5,7 +5,7 @@ from utils import DenseAutoEncoderSearch
 app = Flask(__name__)
 CORS(app=app)
 
-DAESearch = DenseAutoEncoderSearch()
+search = DenseAutoEncoderSearch()
 
 # Serving Static
 @app.route("/static/<string:_type>/<string:_file>",methods=['GET'])
@@ -25,7 +25,7 @@ def index():
 def search():
     img = request.files['image']
     img.save(f"./search/{img.filename}")
-    results = DAESearch(img.filename)
+    results = search(img.filename)
     results = [{"path":f"http://localhost:8080/images/img_{i}.jpg","name":f"img_{i}.jpg"} for i in results ][:50]
     return {
         "results":results
