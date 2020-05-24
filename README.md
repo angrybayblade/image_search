@@ -14,9 +14,9 @@ python3 app.py
 ```
 Then open http://localhost:8080 on your browser.
 
-> Search engine architecture uses a auto encoder to encode images into a 128-D vectors and clusters them using KMeans.
+> <div style="color:#333"> Search engine architecture uses a auto encoder to encode images into a 128-D vectors and clusters them using KMeans.</div>
 
-> When querying an image image is fed into the autoencoder which returns a 128-D vector, the vector is used to find which cluster the image belongs to and then some of the images from the cluster are fetched as result.
+> <div style="color:#333">When querying an image image is fed into the autoencoder which returns a 128-D vector, the vector is used to find which cluster the image belongs to and then some of the images from the cluster are fetched as result.</div>
 
 
 ### Auto-Encoders Used In Search Engine
@@ -49,4 +49,4 @@ search = ConvolutionalAutoEncoderSearch()
 search = ConvolutionalAutoEncoderWithPerceptLossSearch()
 ```
 
-* UI is build in node using ReactJS
+* UI is build in node using ReactJS⚛️ 
