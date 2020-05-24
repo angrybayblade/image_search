@@ -21,15 +21,15 @@ Then open http://localhost:8080 on your browser.
 
 ### Auto-Encoders Used In Search Engine
 
-1. Dense Autoencoder
+1. **Dense Autoencoder**
 
     ![](doc/dense_out.png)
 
-2. Convolutional Autoencoder
+2. **Convolutional Autoencoder**
 
     ![](doc/conv_out.png)
 
-3. Convolutional Autoencoder With Perceptual Loss 
+3. **Convolutional Autoencoder With Perceptual Loss** 
 
     ![](doc/conv_per_out.png)
 
