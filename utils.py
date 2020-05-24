@@ -107,9 +107,9 @@ class DenseAutoEncoderSearch(object):
         x = cv2.imread(f"./search/{x}")
         x = x.mean(axis=2)
         x = self.encoder.predict(x.reshape(1,784))
-        print (x)
+        # print (x)
         x = self.kmeans.predict(x)
-        print (x)
+        # print (x)
         x = np.where(self.clusters == x)
         return x[0]
     
@@ -129,9 +129,9 @@ class ConvolutionalAutoEncoderSearch(object):
         x = cv2.imread(f"./search/{x}")
         x = x.mean(axis=2)
         x = self.encoder.predict(x.reshape(1,28,28,1))
-        print (x)
+        # print (x)
         x = self.kmeans.predict(x)
-        print (x)
+        # print (x)
         x = np.where(self.clusters == x)
         return x[0]
     

@@ -10,7 +10,7 @@ DAESearch = DenseAutoEncoderSearch()
 # Serving Static
 @app.route("/static/<string:_type>/<string:_file>",methods=['GET'])
 def serve_static(_type,_file):
-    print (_type,_file)
+    # print (_type,_file)
     return send_from_directory(f"./templates/static/{_type}",_file,mimetype=f"text/{_type}")
 
 @app.route("/images/<string:name>")
@@ -19,7 +19,7 @@ def image_serve(name):
 
 @app.route("/",methods=['GET'])
 def index():
-    return "Hello"
+    return render_template("index.html")
 
 @app.route("/search",methods=['GET','POST'])
 def search():
